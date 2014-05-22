@@ -1,0 +1,5 @@
+c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Api.Models\bin\Debug\TomKlonowski.Api.Models.dll
+c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Api.Models\bin\Debug\TomKlonowski.Api.Models.pdb
+c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Api.Models\obj\Debug\TomKlonowski.Api.Models.csprojResolveAssemblyReference.cache
+c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Api.Models\obj\Debug\TomKlonowski.Api.Models.dll
+c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Api.Models\obj\Debug\TomKlonowski.Api.Models.pdb

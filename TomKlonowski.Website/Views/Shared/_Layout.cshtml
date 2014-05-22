@@ -1,0 +1,41 @@
+﻿@using TomKlonowski.Website.Helpers;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Tom Klonowski</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="wrap">
+        <div id="main">
+            <header>
+                <div id="header">
+                    <div id="logo">
+                        <div id="logo_text">
+                            <h1><a href="@Url.Action("Index", "Home")">Tom<span class="logo_colour">Klonowski</span></a></h1>
+                            <h2>Development Portfolio</h2>
+                        </div>
+                    </div>
+                    @Html.Partial("_Navigation")
+                </div>
+            </header>
+            <div id="site_content">
+                @Html.Partial("_Sidebar")
+                <div id="content">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @Html.Partial("_Footer")
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

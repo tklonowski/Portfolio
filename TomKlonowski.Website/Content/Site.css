@@ -107,7 +107,7 @@ ol {
 }
 
 #header {
-    background: url(/Images/back2.png) repeat-x;
+    background: url(/Images/back.png) repeat-x;
 }
 
 #logo {
@@ -213,11 +213,11 @@ ul#menu {
 
         ul#menu li.selected {
             margin: 7px 0 0 0;
-            background: #635B53 url(/Images/tabs2.png) no-repeat 0 0px;
+            background: #635B53 url(/Images/active-tab.png) no-repeat 0 0px;
         }
 
             ul#menu li.selected a, ul#menu li.selected a:hover {
-                background: #635B53 url(/Images/tabs2.png) no-repeat 100% 0px;
+                background: #635B53 url(/Images/active-tab.png) no-repeat 100% 0px;
                 color: #FFF;
             }
 
@@ -251,7 +251,7 @@ ul#menu {
         .sidebar li a, .sidebar li a:hover {
             padding: 4px 0px 4px 35px;
             display: block;
-            background: transparent url(/Images/sidebar-link2.png) no-repeat left center;
+            background: transparent url(/Images/sidebar-link.png) no-repeat left center;
             border: none;
         }
 

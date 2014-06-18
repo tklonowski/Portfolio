@@ -10,20 +10,28 @@ namespace TomKlonowski.Website
         {
             #region Scripts
 
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jquery")
+                .Include("~/Scripts/jquery/jquery-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui")
+                .Include("~/Scripts/jquery/jquery-ui-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval")
+                .Include("~/Scripts/jquery/jquery.unobtrusive*",
+                        "~/Scripts/jquery/jquery.validate*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-            "~/Scripts/angular/angular.js",
-            "~/Scripts/angular/angular-animate.js"
-            ));
+            bundles.Add(new ScriptBundle("~/bundles/angular")
+                .Include("~/Scripts/angular/angular.js",
+                         "~/Scripts/angular/angular-animate.js",
+                         "~/Scripts/angular/angular-resource.js",
+                         "~/Scripts/angular/angular-route.js")
+                .IncludeDirectory("~/Scripts/angular/modules", "*.js")
+                .IncludeDirectory("~/Scripts/angular/controllers", "*.js")
+                .IncludeDirectory("~/Scripts/angular/directives", "*.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/custom")
+                .Include("~/Scripts/Navigation.js"));
+
 
             #endregion
 

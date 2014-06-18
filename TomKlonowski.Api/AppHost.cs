@@ -21,6 +21,7 @@ namespace TomKlonowski.Api
             container.Adapter = NinjectWebCommon.CreateServiceStackAdapter();
 
             Plugins.Add(new SwaggerFeature());
+            Plugins.Add(new CorsFeature());
         }
     }
 }

@@ -2,8 +2,11 @@
 
 <div id="menubar">
     <ul id="menu">
-        @Html.MenuLink("Home", "Index", "Home")
-        @Html.MenuLink("About", "About", "Home")
-        @Html.MenuLink("Contact", "Contact", "Home")
+        <li class="selected">
+            <a href="/#home" onclick="Navigation.setActive(this);">Home</a>
+        </li>
+        <li>
+            <a href="/#about" onclick="Navigation.setActive(this);">About</a>
+        </li>
     </ul>
 </div>

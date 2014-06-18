@@ -10,8 +10,10 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/angular")
+
+    @RenderSection("AngularJavascript", required: false)
 </head>
-<body>
+<body data-ng-app="ngApp">
     <div id="wrap">
         <div id="main">
             <header>
@@ -28,7 +30,9 @@
             <div id="site_content">
                 @Html.Partial("_Sidebar")
                 <div id="content">
-                    @RenderBody()
+                    <div data-ng-view="">
+                        @RenderBody()
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,6 +41,7 @@
         @Html.Partial("_Footer")
     </footer>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/custom")
     @RenderSection("scripts", required: false)
 </body>
 </html>

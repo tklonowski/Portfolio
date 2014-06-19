@@ -11,11 +11,12 @@ namespace TomKlonowski.DB
     public class TomKlonowskiDbContext : DbContext
     {
         public TomKlonowskiDbContext()
-            : base("DefaultConnection")
+            : base("TomKlonowski")
         {
 
         }
 
         public DbSet<Note> Notes { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
     }
 }

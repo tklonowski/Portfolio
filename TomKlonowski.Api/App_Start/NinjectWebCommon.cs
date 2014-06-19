@@ -74,9 +74,11 @@ namespace TomKlonowski.Api.App_Start
         {
             //Repositories
             kernel.Bind<INoteRepository>().To<SqlRepository>();
+            kernel.Bind<IBlogRepository>().To<SqlRepository>();
 
             //Managers
             kernel.Bind<INoteManager>().To<NoteManager>();
+            kernel.Bind<IBlogManager>().To<BlogManager>();
         }        
     }
 }

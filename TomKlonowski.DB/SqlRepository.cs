@@ -5,11 +5,11 @@ using TomKlonowski.Model;
 
 namespace TomKlonowski.DB
 {
-    public class SqlRepository : INoteRepository
+    public class SqlRepository : IBlogRepository, INoteRepository
     {
         #region Notes
 
-        public IEnumerable<Note> GetAllNotes()
+        public IEnumerable<Note> GetNotes()
         {
             throw new NotImplementedException();
         }
@@ -36,6 +36,41 @@ namespace TomKlonowski.DB
         }
 
         public void DelteNote(int noteId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region Blogs
+
+        public IEnumerable<Blog> GetBlogs()
+        {
+            return new TomKlonowskiDbContext().Blogs;
+        }
+
+        public Blog GetBlog(int blogId)
+        {
+            return new TomKlonowskiDbContext().Blogs.Find(blogId);
+        }
+
+        public Blog CreateBlog(Blog newBlog)
+        {
+            using (var db = new TomKlonowskiDbContext())
+            {
+                db.Blogs.Add(newBlog);
+                db.SaveChanges();
+
+                return newBlog;
+            }
+        }
+
+        public Blog UpdateBlog(Blog updatedBlog)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DelteBlog(int blogId)
         {
             throw new NotImplementedException();
         }

@@ -223,8 +223,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back.png" />
-    <Content Include="Images\sidebar-link.png" />
     <Content Include="Images\active-tab.png" />
+    <Content Include="Images\sidebar-link.png" />
     <Content Include="Log4Net.config" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
@@ -246,10 +246,12 @@
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\angular\controllers\about-controller.js" />
+    <Content Include="Scripts\angular\controllers\blog-controller.js" />
     <Content Include="Scripts\angular\controllers\home-controller.js" />
     <Content Include="Scripts\angular\controllers\note-controller.js" />
-    <Content Include="Scripts\angular\modules\note-module.js" />
+    <Content Include="Scripts\angular\modules\app.js" />
     <Content Include="Scripts\angular\views\about.html" />
+    <Content Include="Scripts\angular\views\blogs.html" />
     <Content Include="Scripts\angular\views\home.html" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
@@ -352,7 +354,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>54908</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:60348/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

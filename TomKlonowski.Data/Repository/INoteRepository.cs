@@ -9,7 +9,7 @@ namespace TomKlonowski.Data.Repository
 {
     public interface INoteRepository
     {
-        IEnumerable<Note> GetAllNotes();
+        IEnumerable<Note> GetNotes();
         Note GetNote(int noteId);
         Note CreateNote(Note newNote);
         Note UpdateNote(Note updatedNote);

@@ -54,10 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Request\CreateNoteRequest.cs" />
+    <Compile Include="Request\BlogRequest.cs" />
+    <Compile Include="Request\NoteRequest.cs" />
     <Compile Include="Request\HelloRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Request\GetNoteRequest.cs" />
     <Compile Include="Response\HelloResponse.cs" />
     <Compile Include="Response\NoteResponse.cs" />
   </ItemGroup>

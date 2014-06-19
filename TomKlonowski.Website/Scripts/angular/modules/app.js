@@ -22,6 +22,29 @@
         }
     }
 })
+.factory('blogs', function ($http, $q) {
+    return {
+        apiPath: 'http://localhost:59714/blog',
+        getAllItems: function () {
+            //Creating a deferred object
+            var deferred = $q.defer();
+
+            //Calling Web API to fetch shopping cart items
+            $http.get(this.apiPath).success(function (data) {
+                //Passing data to deferred's resolve function on successful completion
+                console.log("data" + data.Title);
+                deferred.resolve(data);
+            }).error(function () {
+
+                //Sending a friendly error message in case of failure
+                deferred.reject("An error occured while fetching items");
+            });
+
+            //Returning the promise object
+            return deferred.promise;
+        }
+    }
+})
 .config(function ($routeProvider, $locationProvider) {
 
     $routeProvider.when("/about", {
@@ -34,6 +57,10 @@
         templateUrl: "/Scripts/angular/views/home.html"
     });
 
+    $routeProvider.when("/blogs", {
+        controller: "HomeController",
+        templateUrl: "/Scripts/angular/views/blogs.html"
+    });
 
     $routeProvider.otherwise({ redirectTo: "/" });
 

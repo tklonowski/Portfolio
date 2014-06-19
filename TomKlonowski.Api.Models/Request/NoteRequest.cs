@@ -14,4 +14,11 @@ namespace TomKlonowski.Api.Model.Request
 
         public string Description { get; set; }
     }
+
+    [Route("/note/{NoteId}", "GET")]
+    public class GetNoteRequest
+    {
+        [ApiMember(Name = "NoteId", ParameterType = "query", Description = "Id of the Note to get", DataType = "int", IsRequired = true)]
+        public int NoteId { get; set; }
+    }
 }

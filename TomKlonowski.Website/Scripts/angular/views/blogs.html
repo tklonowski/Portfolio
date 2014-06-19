@@ -1,0 +1,18 @@
+﻿<h1>My Blogs</h1>
+
+<div data-ng-controller="BlogController">
+    <div data-ng-repeat="blog in blogs">
+        <div class="blog">
+            <div class="blog-title">{{blog.Title}}</div>
+            <div class="blog-date">
+                {{blog.CreatedDate | date:'short'}}
+            </div>
+            <div class="blog-body">
+                {{blog.Body}}
+            </div>
+            <div class="blog-tag">
+                <span>Tags: </span><i>{{blog.Tags}}</i>
+            </div>
+        </div>
+    </div>
+</div>

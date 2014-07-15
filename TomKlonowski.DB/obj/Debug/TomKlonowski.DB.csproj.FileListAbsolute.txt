@@ -15,3 +15,4 @@ c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski
 c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.DB\obj\Debug\TomKlonowski.DB.Migrations.Notes_SortOrder.resources
 c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.DB\obj\Debug\TomKlonowski.DB.csproj.GenerateResource.Cache
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.DB\obj\Debug\TomKlonowski.DB.Migrations.Blogs.resources
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.DB\obj\Debug\TomKlonowski.DB.Migrations.Blogs_Description.resources

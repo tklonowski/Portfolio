@@ -26,15 +26,13 @@ h1, h2, h3, h4 {
     padding: 7px 0px 5px 0px;
     margin: 0px 0px 12px 0px;
     font-weight: normal;
-    color: #342F28;
+    color: #468875;
     font-family: serif;
 }
 
 h1, h3 {
-    text-transform: uppercase;
     margin: 10px 0px 20px 0px;
     padding: 5px 20px 5px 0px;
-    border-bottom: 1px solid #CCC6B4;
 }
 
 a, a:hover {
@@ -181,8 +179,8 @@ ol {
 #menubar {
     width: 870px;
     height: 46px;
-    padding-top: 4px;
     padding-left: 4px;
+    padding-top: 5px;
 }
 
 ul#menu {
@@ -197,7 +195,7 @@ ul#menu {
         list-style: none;
     }
 
-        ul#menu li a {
+        ul#menu li > a {
             letter-spacing: 0.1em;
             font-family: serif;
             font-size: 100%;
@@ -205,30 +203,88 @@ ul#menu {
             float: left;
             height: 20px;
             text-decoration: none;
-            padding: 9px 22px 5px 16px;
+            padding: 7px 22px 4px 16px;
+            margin: 2px 0 0 0;
             text-align: center;
             color: #FFF;
             text-transform: uppercase;
             border: none;
         }
 
-        ul#menu li.selected a {
-            height: 20px;
-            padding: 7px 22px 4px 16px;
+            ul#menu li > a.arrow {
+                background-image: url(/Images/nav-arrow.png);
+                background-position: right;
+                background-repeat: no-repeat;
+            }
+
+                ul#menu li > a.arrow:hover {
+                    color: #fff;
+                }
+
+        ul#menu li.selected > a.arrow {
+            background-image: url(/Images/nav-arrow.png);
+            background-position: right;
+            background-repeat: no-repeat;
         }
 
-        ul#menu li.selected {
-            margin: 7px 0 0 0;
+        ul#menu li.selected > a {
+            height: 20px;
+            padding: 7px 22px 4px 16px;
+            margin: 2px 0 0 0;
             background: #468875 no-repeat 0 0px;
         }
 
-            ul#menu li.selected a, ul#menu li.selected a:hover {
-                background: #468875 no-repeat 100% 0px;
-                color: #FFF;
-            }
+        ul#menu li.hover > a {
+            height: 20px;
+            padding: 7px 22px 4px 16px;
+            margin: 2px 0 0 0;
+            background-color: #509d87;
+        }
 
-        ul#menu li a:hover {
-            color: #468875;
+        ul#menu li.selected > a, ul#menu li.selected > a:hover {
+            background: right #468875 no-repeat 100% 0px;
+            color: #FFF;
+        }
+
+        ul#menu li > a:hover {
+            background-color: #509d87;
+            height: 19px;
+        }
+
+.nav-dropdown {
+    min-height: 50px;
+    position: absolute;
+    background-color: #509d87;
+    margin-top: 32px;
+    width: 150px;
+    left: -25px;
+    display: none;
+    border-left: 1px solid #3e806d;
+    border-right: 1px solid #3e806d;
+    border-bottom: 1px solid #3e806d;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+    .nav-dropdown > a {
+        width: 100%;
+        font-family: serif;
+        font-size: 100%;
+        display: block;
+        float: left;
+        height: 20px;
+        text-decoration: none;
+        text-align: center;
+        color: #FFF;
+        text-transform: uppercase;
+        border: none;
+        padding: 10px 0px 5px 0px;
+        border-bottom: 1px solid #3e806d;
+        background-repeat: no-repeat;
+        background-position-y: center;
+    }
+
+        .nav-dropdown > a:hover {
+            background-color: #67a794;
         }
 
 #site_content {
@@ -240,7 +296,8 @@ ul#menu {
 .sidebar {
     float: left;
     width: 178px;
-    padding: 20px 25px 15px 15px;
+    padding: 0px 20px 15px 15px;
+    background-color: #fff;
 }
 
     .sidebar ul {
@@ -269,7 +326,7 @@ ul#menu {
     text-align: left;
     width: 624px;
     float: left;
-    padding: 20px 10px 15px 0px;
+    padding: 0px 10px 15px 10px;
 }
 
 #footer {
@@ -409,21 +466,22 @@ table {
     padding: 10px;
     background-color: #f5f5f5;
     margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
 }
 
 .blog-title {
     font-weight: bold;
     font-size: 1.2em;
     color: #468875;
+    float: left;
 }
 
 .blog-date {
-        margin-bottom: 10px;
-        font-size: 0.8em;
+    margin-bottom: 10px;
+    font-size: 0.8em;
 }
 
 .blog-body {
-
 }
 
 .blog-tag {
@@ -434,3 +492,110 @@ table {
     .blog-tag span {
         font-weight: bold;
     }
+
+.blog-button {
+    margin-top: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.right {
+    float: right;
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.button {
+    color: #fff;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 4px;
+    background-color: #468875;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    outline: none;
+    text-decoration: none;
+}
+
+    .button:hover {
+        background-color: #509d87;
+        color: #fff;
+    }
+
+    .button:active {
+        background-color: #3d7e6b;
+    }
+
+.form-label {
+    vertical-align: top;
+    text-align: left;
+    font-weight: bold;
+    width: 10%;
+}
+
+.form-table {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+    .form-table td {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .form-table input, textarea {
+        width: 100%;
+    }
+
+.message-box {
+    position: absolute;
+    width: 300px;
+    margin-top: 10px;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.message-success {
+    width: 300px;
+    min-height: 30px;
+    background-color: #e0e0e0;
+    border: 3px solid #04bb00;
+    margin-top: 10px;
+    padding: 5px 50px 10px 10px;
+    box-shadow: 3px 3px 5px #000;
+    background-image: url(/Images/success.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    color: #635B53;
+}
+
+.message-error {
+    width: 300px;
+    min-height: 30px;
+    background-color: #e0e0e0;
+    border: 3px solid #bb0000;
+    margin-top: 10px;
+    padding: 5px 50px 10px 10px;
+    box-shadow: 3px 3px 5px #000;
+    background-image: url(/Images/error.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+    color: #635B53;
+}
+
+.message-body {
+}
+
+.message-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}

@@ -1,0 +1,53 @@
+﻿<div data-ng-controller="BlogController">
+    <h1>Add a Blog</h1>
+    <table class="form-table">
+        <tr>
+            <td class="form-label">Title</td>
+            <td>
+                <input type="text" data-ng-model="newBlog.Title" placeholder="Enter Title Here" />
+            </td>
+        </tr>
+        <tr>
+            <td class="form-label">Tags</td>
+            <td>
+                <input type="text" data-ng-model="newBlog.Tags" placeholder="Enter Tags Here" />
+            </td>
+        </tr>
+        <tr>
+            <td class="form-label">Description</td>
+            <td>
+                <textarea data-ng-model="newBlog.Description" placeholder="Enter Description Here" style="height: 50px;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="form-label">Body</td>
+            <td>
+                <textarea data-ng-model="newBlog.Body" placeholder="Enter Body Here" style="height: 150px;"></textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="button" style="margin-bottom: 10px;" data-ng-click="addBlog()" value="Add Blog" class="button right" />
+    <hr class="clear" />
+    <h1>Preview</h1>
+    <div class="blog">
+        <div>
+            <div class="blog-title">
+                <span id="blog-title">{{newBlog.Title}}</span>
+            </div>
+            <div class="blog-tag">
+                <span>Tags: </span><i id="blog-tags">{{newBlog.Tags}}</i>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="blog-date">
+            <span id="blog-date">{{date | date:'medium'}}</span>
+        </div>
+        <div class="blog-body">
+            <span id="blog-body">{{newBlog.Body}}</span>
+        </div>
+        <!--        <div class="blog-button right">
+            <a class="button" data-ng-click="loadBlog(blog.Id)">Back to Blogs</a>
+        </div>
+        <div class="clear"></div>-->
+    </div>
+</div>

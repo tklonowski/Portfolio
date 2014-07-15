@@ -1,15 +1,22 @@
 ﻿@using TomKlonowski.Website.Helpers;
 
-<div id="menubar">
+<div id="menubar" data-ng-controller="NavigationController">
     <ul id="menu">
-        <li class="selected">
-            <a href="/" onclick="Navigation.setActive(this);">Home</a>
+        <li data-ng-class="{selected:isActive('/')}">
+            <a href="/" onclick="Navigation.setActive(this, false);">Home</a>
         </li>
-        <li>
-            <a href="/about" onclick="Navigation.setActive(this);">About</a>
+        <li data-ng-class="{selected:isActive('/about')}">
+            <a href="/about" onclick="Navigation.setActive(this, false);">About</a>
         </li>
-        <li>
-            <a href="/blogs" onclick="Navigation.setActive(this);">Blogs</a>
+        <li style="position: relative;" data-ng-class="{selected:isActive('/blogs')}">
+            <a class="arrow" href="#" onclick="Navigation.setActive(this, true);">Blogs</a>
+            <div class="nav-dropdown">
+                <a href="/blogs" style="background-image: url(/Images/eye.png);" onclick="Navigation.hideParentDropdown(this);">View Blogs</a>
+                <a href="/blogs/add" style="background-image: url(/Images/plus_nb.png);" onclick="Navigation.hideParentDropdown(this);">Add Blogs</a>
+            </div>
+        </li>
+        <li data-ng-class="{selected:isActive('/test')}">
+            <a href="/test" onclick="Navigation.setActive(this, false);">Test Page</a>
         </li>
     </ul>
 </div>

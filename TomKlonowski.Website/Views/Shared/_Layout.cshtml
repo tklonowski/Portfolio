@@ -1,20 +1,28 @@
 ﻿@using TomKlonowski.Website.Helpers;
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="ngApp">
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title - Tom Klonowski</title>
+    <title data-ng-bind="'Tom Klonowski - ' + $root.title">Tom Klonowski</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+
+    <script src="/Scripts/Global.js"></script>
+    <script>
+        Global.loadVars('@System.Configuration.ConfigurationManager.AppSettings["SiteUrl"]', '@System.Configuration.ConfigurationManager.AppSettings["ServiceStackUrl"]');
+    </script>
+
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/customangular")
 
     @RenderSection("AngularJavascript", required: false)
 </head>
-<body data-ng-app="ngApp">
+<body>
     <div id="wrap">
+        <div class="message-box">
+        </div>
         <div id="main">
             <header>
                 <div id="header">
@@ -30,7 +38,7 @@
             <div id="site_content">
                 @Html.Partial("_Sidebar")
                 <div id="content">
-                    <div data-ng-view="">
+                    <div data-ng-view="" class="page-view" data-ng-class="pageAnimationClass">
                         @RenderBody()
                     </div>
                 </div>
@@ -43,5 +51,10 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/custom")
     @RenderSection("scripts", required: false)
+    <script>
+        $(document).ready(function () {
+            Global.init();
+        });
+    </script>
 </body>
 </html>

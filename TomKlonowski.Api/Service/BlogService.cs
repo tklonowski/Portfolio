@@ -38,12 +38,35 @@ namespace TomKlonowski.Api.Service
             return this._BlogManager.CreateBlog(Map(request));
         }
 
+        public object Put(UpdateBlogRequest request)
+        {
+            return this._BlogManager.UpdateBlog(Map(request));
+        }
+
+        public void Delete(DeleteBlogRequest request)
+        {
+            this._BlogManager.DeleteBlog(request.BlogId);
+        }
+
         private Blog Map(CreateBlogRequest blogRequest)
         {
             Blog blog = new Blog();
             blog.Body = blogRequest.Body;
             blog.Tags = blogRequest.Tags;
             blog.Title = blogRequest.Title;
+            blog.Description = blogRequest.Description;
+
+            return blog;
+        }
+
+        private Blog Map(UpdateBlogRequest blogRequest)
+        {
+            Blog blog = new Blog();
+            blog.Id = blogRequest.Id;
+            blog.Body = blogRequest.Body;
+            blog.Tags = blogRequest.Tags;
+            blog.Title = blogRequest.Title;
+            blog.Description = blogRequest.Description;
 
             return blog;
         }

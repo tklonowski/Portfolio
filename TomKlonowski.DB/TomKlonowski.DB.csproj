@@ -56,6 +56,10 @@
     <Compile Include="Migrations\201406190144557_Blogs.Designer.cs">
       <DependentUpon>201406190144557_Blogs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201406260518004_Blogs_Description.cs" />
+    <Compile Include="Migrations\201406260518004_Blogs_Description.Designer.cs">
+      <DependentUpon>201406260518004_Blogs_Description.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SqlRepository.cs" />
     <Compile Include="TomKlonowskiDbContext.cs" />
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201406190144557_Blogs.resx">
       <DependentUpon>201406190144557_Blogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406260518004_Blogs_Description.resx">
+      <DependentUpon>201406260518004_Blogs_Description.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -12,5 +12,7 @@ namespace TomKlonowski.Business
         IEnumerable<Blog> GetBlogs();
         Blog GetBlog(int blogId);
         Blog CreateBlog(Blog newBlog);
+        Blog UpdateBlog(Blog updatedBlog);
+        void DeleteBlog(int blogId);
     }
 }

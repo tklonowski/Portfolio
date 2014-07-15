@@ -1,0 +1,34 @@
+﻿<div data-ng-controller="BlogController">
+    <h1>My Blogs</h1>
+    <div class="right">
+        <a href="/blogs/add">Add New Blog</a>
+    </div>
+    <div class="clear" />
+    <div data-ng-show="!blogs.length">There are currently no blogs available.</div>
+    <div data-ng-show="blogs.length">
+        <div data-ng-repeat="blog in blogs">
+            <div class="blog">
+                <div>
+                    <div class="blog-title">
+                        {{blog.Title}}
+                    </div>
+                    <div class="blog-tag">
+                        <span>Tags: </span><i>{{blog.Tags}}</i>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="blog-date">
+                    {{blog.CreatedDate | date:'short'}}
+                </div>
+                <div class="blog-body">
+                    {{blog.Description}}
+                </div>
+                <div class="blog-button right">
+                    <input type="button" value="Delete" data-ng-click="deleteBlog(blog.Id)" class="button" />
+                    <a class="button" data-ng-href="/blogs/{{blog.Id}}">Read Blog</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>

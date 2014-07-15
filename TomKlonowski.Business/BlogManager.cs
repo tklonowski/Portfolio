@@ -32,5 +32,15 @@ namespace TomKlonowski.Business
             newBlog.CreatedDate = DateTime.Now;
             return this._BlogRepository.CreateBlog(newBlog);
         }
+
+        public Blog UpdateBlog(Blog updatedBlog)
+        {
+            return this._BlogRepository.UpdateBlog(updatedBlog);
+        }
+
+        public void DeleteBlog(int blogId)
+        {
+            this._BlogRepository.DelteBlog(blogId);
+        }
     }
 }

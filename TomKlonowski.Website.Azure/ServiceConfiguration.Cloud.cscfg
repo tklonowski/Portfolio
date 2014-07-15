@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="TomKlonowski.Website.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="TomKlonowski.Website">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tomklonowski;AccountKey=ROx497vsBH+SDUv/Y4BYLu07N+TKWxI6+O2nUSBzWYblhoL3Q4yCjp7UamSHWzc+mu3ag+xl8c31DxTVZBjndA==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

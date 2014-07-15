@@ -67,12 +67,31 @@ namespace TomKlonowski.DB
 
         public Blog UpdateBlog(Blog updatedBlog)
         {
-            throw new NotImplementedException();
+            using (var db = new TomKlonowskiDbContext())
+            {
+                var blog = db.Blogs.Find(updatedBlog.Id);
+
+                blog.Title = updatedBlog.Title;
+                blog.Body = updatedBlog.Body;
+                blog.Description = updatedBlog.Description;
+                blog.Tags = updatedBlog.Tags;
+                blog.UpdateDate = DateTime.UtcNow;
+                
+                db.SaveChanges();
+
+                return this.GetBlog(blog.Id);
+            }
         }
 
         public void DelteBlog(int blogId)
         {
-            throw new NotImplementedException();
+            using (var db = new TomKlonowskiDbContext())
+            {
+                var blog = db.Blogs.Find(blogId);
+
+                db.Blogs.Remove(blog);
+                db.SaveChanges();
+            }
         }
 
         #endregion

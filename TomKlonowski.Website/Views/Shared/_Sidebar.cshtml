@@ -4,7 +4,7 @@
     <div data-ng-controller="BlogController">
         <div data-ng-show="!blogs.length">There are currently no blogs available.</div>
         <div data-ng-show="blogs.length">
-            <div data-ng-repeat="blog in blogs">
+            <div data-ng-repeat="blog in blogs.slice(0, 4)">
                 <div style="font-weight: bold">{{blog.Title}}</div>
                 <div style="font-style: italic; font-size: 0.8em; margin-bottom: 5px;">{{blog.CreatedDate | date: 'short'}}</div>
                 <div>{{blog.Description}}</div>
@@ -17,6 +17,5 @@
         <li><a href="@System.Configuration.ConfigurationManager.AppSettings["ServiceStackUrl"]/swagger-ui/index.html" target="_blank">My API</a></li>
         <li><a href="https://github.com/tklonowski/" target="_blank">My GitHub</a></li>
         <li><a href="https://github.com/tklonowski/portfolio" target="_blank">This Site's GitHub</a></li>
-        <li><a href="#">link 4</a></li>
     </ul>
 </div>

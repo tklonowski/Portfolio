@@ -5,7 +5,6 @@ namespace TomKlonowski.Website
 {
     public class BundleConfig
     {
-        // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
             #region Scripts
@@ -25,25 +24,19 @@ namespace TomKlonowski.Website
                 .Include("~/Scripts/angular/angular.js",
                          "~/Scripts/angular/angular-animate.js",
                          "~/Scripts/angular/angular-resource.js",
-                         "~/Scripts/angular/angular-route.js"));
-            //.IncludeDirectory("~/Scripts/angular/modules", "*.js")
-            //.IncludeDirectory("~/Scripts/angular/controllers", "*.js")
-            //.IncludeDirectory("~/Scripts/angular/directives", "*.js"));
-
-
-            bundles.Add(new ScriptBundle("~/bundles/customangular")
-                .Include("~/Angular/app.js",
-                         "~/Angular/controllers/about-controller.js",
-                         "~/Angular/controllers/blog-controller.js",
-                         "~/Angular/controllers/home-controller.js",
-                         "~/Angular/controllers/navigation-controller.js",
-                         "~/Angular/controllers/test-controller.js",
-                         "~/Angular/controllers/note-controller.js"));
+                         "~/Scripts/angular/angular-route.js",
+                         "~/Angular/app.js")
+            .IncludeDirectory("~/Angular/controllers", "*.js")
+            .IncludeDirectory("~/Angular/services", "*.js")
+            .IncludeDirectory("~/Angular/filters", "*.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/custom")
                 .Include("~/Scripts/Navigation.js",
                          "~/Scripts/Utilities.js",
                          "~/Scripts/Blogs.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquerycustomlibs")
+                .Include("~/Scripts/libs/jquery.ba-dotimeout.js"));
 
             #endregion
 

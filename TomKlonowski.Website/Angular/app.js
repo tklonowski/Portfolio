@@ -1,55 +1,16 @@
 ﻿var ngApp = angular.module("ngApp", ['ngRoute', 'ngResource'])
-.run(["$rootScope", "$route", function ($rootScope, $route) {
+.run(["$rootScope", "$route", "blogs", function ($rootScope, $route, blogs) {
     $rootScope.$on("$routeChangeSuccess", function (currentRoute, previousRoute) {
         $rootScope.title = $route.current.title;
+
+        switch($route.current.originalPath) {
+            case '/blogs/:id':
+                //should be loaded based on architecture, might want to change to check, and load if not.
+                blogs.setCurrentBlog($route.current.params.id);
+                break;
+            default:
+        }
     });
-}])
-.factory('notes', ["$http", "$q", function ($http, $q) {
-    return {
-        apiPath: apiUrl('/note/1'),
-        getAllItems: function () {
-
-            var deferred = $q.defer();
-
-            $http.get(this.apiPath).success(function (data) {
-                deferred.resolve(data);
-            }).error(function () {
-                deferred.reject("An error occured while fetching items");
-            });
-
-            return deferred.promise;
-        }
-    }
-}])
-.factory('blogs', ["$http", "$q", function ($http, $q) {
-    return {
-        apiPath: apiUrl('/blog'),
-        getAllItems: function () {
-            var deferred = $q.defer();
-
-            $http.get(this.apiPath).success(function (data) {
-                deferred.resolve(data);
-            }).error(function () {
-
-                deferred.reject("An error occured while fetching items");
-            });
-
-            return deferred.promise;
-        },
-        deleteBlog: function (blogId) {
-            $http.delete(this.apiPath + "/" + blogId)
-            .success(function (data, status, headers, config) {
-                Util.addMessage('success', 'Blog Deleted Successfully', 'Your blog has been deleted successfully.');
-            });;
-        },
-        createBlog: function (title, tags, description, body, callback) {
-            $http.post(this.apiPath, { title: title, tags: tags, description: description, body: body })
-                .success(function (data, status, headers, config) {
-                    Util.addMessage('success', 'Blog Added Successfully', 'Your blog titled <strong>' + data.Title + '</strong> has been added successfully.');
-                    callback();
-                });;
-        }
-    }
 }])
 .config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 

@@ -1,32 +1,51 @@
 ﻿<div data-ng-controller="BlogController">
-    <h1>Add a Blog</h1>
-    <table class="form-table">
-        <tr>
-            <td class="form-label">Title</td>
-            <td>
-                <input type="text" data-ng-model="newBlog.Title" placeholder="Enter Title Here" />
-            </td>
-        </tr>
-        <tr>
-            <td class="form-label">Tags</td>
-            <td>
-                <input type="text" data-ng-model="newBlog.Tags" placeholder="Enter Tags Here" />
-            </td>
-        </tr>
-        <tr>
-            <td class="form-label">Description</td>
-            <td>
-                <textarea data-ng-model="newBlog.Description" placeholder="Enter Description Here" style="height: 50px;"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td class="form-label">Body</td>
-            <td>
-                <textarea data-ng-model="newBlog.Body" placeholder="Enter Body Here" style="height: 150px;"></textarea>
-            </td>
-        </tr>
-    </table>
-    <input type="button" style="margin-bottom: 10px;" data-ng-click="addBlog()" value="Add Blog" class="button right" />
+    <div>
+        <h1 class="left" style="padding-right: 0px;">Add a Blog</h1>
+        <img class="info" id="info-add-blog" src="/Images/info-icon.png" onclick="Util.addMessage('info', 'Adding a Blog', 'This will add a blog to the website. Noone but me should really be doing this, but since it\'s not locked down, get at it!', 10000);" />
+        <div style="padding-top: 20px;">
+        <div class="right">- Required</div>
+            </div>
+        <div class="required-key right"></div>
+        <div class="clear"></div>
+    </div>
+    <form name="form" class="css-form" novalidate>
+        <div data-ng-show="(form.uTitle.$dirty && form.uTitle.$invalid) || (form.uTags.$dirty && form.uTags.$invalid) || (form.uDescription.$dirty && form.uDescription.$invalid) || (form.uBody.$dirty && form.uBody.$invalid) " class="validate-summary">
+            <span>Please correct the following errors:</span>
+            <ul>
+                <li data-ng-show="form.uTitle.$error.required && form.uTitle.$dirty">Your blog must have a title.</li>
+                <li data-ng-show="form.uTags.$error.required && form.uTags.$dirty">Your blog must have at least one tag.</li>
+                <li data-ng-show="form.uDescription.$error.required && form.uDescription.$dirty">Your blog must have a description.</li>
+                <li data-ng-show="form.uBody.$error.required && form.uBody.$dirty">What is the point of a blog without a body?</li>
+            </ul>
+        </div>
+        <table class="form-table">
+            <tr>
+                <td class="form-label">Title</td>
+                <td>
+                    <input type="text" data-ng-model="newBlog.Title" required placeholder="Enter Title Here" name="uTitle" />
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label">Tags</td>
+                <td>
+                    <input type="text" data-ng-model="newBlog.Tags" required placeholder="Enter Tags Here" name="uTags" />
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label">Description</td>
+                <td>
+                    <textarea data-ng-model="newBlog.Description" required placeholder="Enter Description Here" style="height: 50px;" name="uDescription"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="form-label">Body</td>
+                <td>
+                    <textarea data-ng-model="newBlog.Body" required placeholder="Enter Body Here" style="height: 150px;" name="uBody"></textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="button" data-ng-disabled="form.$invalid" style="margin-bottom: 10px;" data-ng-click="addBlog()" value="Add Blog" class="button right" />
+    </form>
     <hr class="clear" />
     <h1>Preview</h1>
     <div class="blog">
@@ -45,9 +64,5 @@
         <div class="blog-body">
             <span id="blog-body">{{newBlog.Body}}</span>
         </div>
-        <!--        <div class="blog-button right">
-            <a class="button" data-ng-click="loadBlog(blog.Id)">Back to Blogs</a>
-        </div>
-        <div class="clear"></div>-->
     </div>
 </div>

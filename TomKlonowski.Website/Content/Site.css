@@ -532,6 +532,10 @@ table {
         background-color: #3d7e6b;
     }
 
+    .button:disabled {
+        background-color: #8f8f8f;
+    }
+
 .form-label {
     vertical-align: top;
     text-align: left;
@@ -560,36 +564,35 @@ table {
     margin-top: 10px;
     left: 50%;
     margin-left: -150px;
+    opacity: 0.9;
 }
 
-.message-success {
+.message {
     width: 300px;
     min-height: 30px;
     background-color: #e0e0e0;
+    margin-top: 10px;
+    padding: 5px 50px 10px 10px;
+    box-shadow: 3px 3px 5px #000;
+    color: #635B53;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 99% 50%;
+}
+
+.msuccess {
     border: 3px solid #04bb00;
-    margin-top: 10px;
-    padding: 5px 50px 10px 10px;
-    box-shadow: 3px 3px 5px #000;
     background-image: url(/Images/success.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-position: 99% 50%;
-    color: #635B53;
 }
 
-.message-error {
-    width: 300px;
-    min-height: 30px;
-    background-color: #e0e0e0;
+.merror {
     border: 3px solid #bb0000;
-    margin-top: 10px;
-    padding: 5px 50px 10px 10px;
-    box-shadow: 3px 3px 5px #000;
     background-image: url(/Images/error.png);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-position: 99% 50%;
-    color: #635B53;
+}
+
+.minfo {
+    border: 3px solid #1000e4;
+    background-image: url(/Images/info.png);
 }
 
 .message-body {
@@ -597,5 +600,42 @@ table {
 
 .message-title {
     font-size: 1.2em;
+    font-weight: bold;
+}
+
+.info {
+    float: left;
+    margin-top: 15px;
+}
+
+input.ng-invalid.ng-dirty {
+    background-color: #ffeaeb;
+    border: 1px solid red;
+}
+
+input.ng-invalid.ng-pristine, .required-key {
+    border: 2px solid #468875;
+}
+
+.required-key {
+    width: 40px;
+    height: 15px;
+}
+
+textarea.ng-invalid.ng-dirty {
+    background-color: #ffeaeb;
+    border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-pristine {
+    border: 2px solid #468875;
+}
+
+.validate-summary li {
+    color: red;
+}
+
+.validate-summary span {
+    color: red;
     font-weight: bold;
 }

@@ -15,7 +15,6 @@
     </script>
 
     @Scripts.Render("~/bundles/angular")
-    @Scripts.Render("~/bundles/customangular")
 
     @RenderSection("AngularJavascript", required: false)
 </head>
@@ -49,6 +48,7 @@
         @Html.Partial("_Footer")
     </footer>
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquerycustomlibs")
     @Scripts.Render("~/bundles/custom")
     @RenderSection("scripts", required: false)
     <script>

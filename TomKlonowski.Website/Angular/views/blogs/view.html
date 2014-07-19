@@ -2,23 +2,18 @@
     <div class="blog">
         <div>
             <div class="blog-title">
-                <input type="button" value="Delete" data-ng-click="deleteBlog(blog.Id)" />
-                <span id="blog-title">{{selectedBlog.Title}}</span>
+                <span id="blog-title">{{currentBlog.Title}}</span>
             </div>
             <div class="blog-tag">
-                <span>Tags: </span><i id="blog-tags">{{selectedBlog.Tags}}</i>
+                <span>Tags: </span><i id="blog-tags">{{currentBlog.Tags}}</i>
             </div>
             <div class="clear"></div>
         </div>
         <div class="blog-date">
-            <span id="blog-date">{{selectedBlog.CreatedDate | date:'short'}}</span>
+            <span id="blog-date">{{currentBlog.CreatedDate | date:'short'}}</span>
         </div>
         <div class="blog-body">
-            <span id="blog-body">{{selectedBlog.Body}}</span>
+            <span id="blog-body">{{currentBlog.Body}}</span>
         </div>
-<!--        <div class="blog-button right">
-            <a class="button" data-ng-click="loadBlog(blog.Id)">Back to Blogs</a>
-        </div>
-        <div class="clear"></div>-->
     </div>
 </div>

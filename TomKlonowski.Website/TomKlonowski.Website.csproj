@@ -229,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Angular\controllers\test-controller.js" />
+    <Content Include="Angular\filters\reverse-filter.js" />
+    <Content Include="Angular\services\blog-service.js" />
+    <Content Include="Angular\services\note-service.js" />
     <Content Include="Angular\views\blogs\view.html" />
     <Content Include="Angular\views\test.html" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -242,6 +245,8 @@
     <Content Include="Images\active-tab.png" />
     <Content Include="Images\error.png" />
     <Content Include="Images\eye.png" />
+    <Content Include="Images\info-icon.png" />
+    <Content Include="Images\info.png" />
     <Content Include="Images\nav-arrow-hover.png" />
     <Content Include="Images\nav-arrow.png" />
     <Content Include="Images\nav-arrow2.png" />
@@ -307,6 +312,8 @@
     <Content Include="Scripts\jquery\jquery.validate.min.js" />
     <Content Include="Scripts\jquery\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\libs\jquery.ba-dotimeout.js" />
+    <Content Include="Scripts\libs\jquery.ba-dotimeout.min.js" />
     <Content Include="Scripts\libs\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\libs\knockout-2.2.0.js" />
     <Content Include="Scripts\libs\modernizr-2.6.2.js" />

@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="swagger-ui\favicon.ico" />
+    <Content Include="swagger-ui\favicon2.ico" />
     <Content Include="Global.asax" />
     <Content Include="swagger-ui\css\highlight.default.css" />
     <Content Include="swagger-ui\css\screen.css" />
@@ -176,6 +177,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\tklonowskiapi - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\tklonowskiapi - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\tomklonowskiapi.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

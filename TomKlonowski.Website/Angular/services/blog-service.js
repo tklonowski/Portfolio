@@ -34,7 +34,7 @@
             .success(function (data, status, headers, config) {
                 blogs.unshift(data);
                 Util.addMessage('success', 'Blog Added Successfully', 'Your blog titled <strong>' + data.Title + '</strong> has been added successfully.');
-                callback();
+                callback(data.Id);
             });
     }
 

@@ -1,4 +1,4 @@
-﻿ngApp.controller("BlogController",["$scope", "blogs", "$location", "$interval", function ($scope, blogs, $location, $interval) {
+﻿ngApp.controller("BlogController", ["$scope", "blogs", "$location", "$interval", function ($scope, blogs, $location, $interval) {
 
     function getBlog(blogId) {
         for (var i = 0; i < $scope.blogs.length; i += 1) {
@@ -8,12 +8,11 @@
         }
     }
 
-    function navToBlogs()
-    {
+    function postBlogCreation(blogId) {
         $location.path('blogs');
     }
 
-    $scope.deleteBlog = function(blogId) {
+    $scope.deleteBlog = function (blogId) {
         blogs.deleteBlog(blogId);
 
         for (var i = 0; i < $scope.blogs.length; i += 1) {
@@ -25,10 +24,8 @@
     }
 
     $scope.addBlog = function () {
-        blogs.createBlog($scope.newBlog.Title, $scope.newBlog.Tags, $scope.newBlog.Description, $scope.newBlog.Body, navToBlogs);
+        blogs.createBlog($scope.newBlog.Title, $scope.newBlog.Tags, $scope.newBlog.Description, $scope.newBlog.Body, postBlogCreation);
     }
-
-    $scope.currentBlog = blogs.getCurrentBlog();
 
     $scope.date = new Date();
     $scope.blogs = blogs.getAllBlogs();
@@ -36,4 +33,9 @@
     $interval(function () {
         $scope.date = new Date();
     }, 1000);
+}]);
+
+ngApp.controller("BlogViewController", ["$scope", "blogs", function ($scope, blogs) {
+    $scope.currentBlog = blogs.getCurrentBlog();
+    $('.blog').fadeIn();
 }]);

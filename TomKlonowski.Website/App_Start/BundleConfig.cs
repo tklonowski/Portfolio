@@ -25,10 +25,12 @@ namespace TomKlonowski.Website
                          "~/Scripts/angular/angular-animate.js",
                          "~/Scripts/angular/angular-resource.js",
                          "~/Scripts/angular/angular-route.js",
+                         "~/Scripts/angular/angular-bootstrap_ui.0.11.0.js",
                          "~/Angular/app.js")
             .IncludeDirectory("~/Angular/controllers", "*.js")
             .IncludeDirectory("~/Angular/services", "*.js")
-            .IncludeDirectory("~/Angular/filters", "*.js"));
+            .IncludeDirectory("~/Angular/filters", "*.js")
+            .IncludeDirectory("~/Angular/directives", "*.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/custom")
                 .Include("~/Scripts/Navigation.js",

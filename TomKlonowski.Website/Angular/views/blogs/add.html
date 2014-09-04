@@ -1,11 +1,9 @@
 ﻿<div data-ng-controller="BlogController">
     <div>
         <h1 class="left" style="padding-right: 0px;">Add a Blog</h1>
-        <img class="info" id="info-add-blog" src="/Images/info-icon.png" onclick="Util.addMessage('info', 'Adding a Blog', 'This will add a blog to the website. Noone but me should really be doing this, but since it\'s not locked down, get at it!', 10000);" />
-        <div style="padding-top: 20px;">
-        <div class="right">- Required</div>
-            </div>
-        <div class="required-key right"></div>
+        <img class="info btn btn-default" id="info-add-blog" src="/Images/info-icon.png" data-popover-placement="top" data-popover-title="Adding a Blog" data-popover="This will add a blog to the website. Noone but me should really be doing this, but since it's not locked down, get at it!" />
+        <div class="right"><label class="required">Required</label></div>
+
         <div class="clear"></div>
     </div>
     <form name="form" class="css-form" novalidate>
@@ -20,27 +18,27 @@
         </div>
         <table class="form-table">
             <tr>
-                <td class="form-label">Title</td>
+                <td class="form-label"><label for="uTitle" class="required">Title</label></td>
                 <td>
-                    <input type="text" data-ng-model="newBlog.Title" required placeholder="Enter Title Here" name="uTitle" />
+                    <input type="text" data-ng-model="newBlog.Title" required placeholder="Enter Title Here" name="uTitle" id="uTitle" />
                 </td>
             </tr>
             <tr>
-                <td class="form-label">Tags</td>
+                <td class="form-label"><label for="uTags" class="required">Tags</label></td>
                 <td>
-                    <input type="text" data-ng-model="newBlog.Tags" required placeholder="Enter Tags Here" name="uTags" />
+                    <input type="text" data-ng-model="newBlog.Tags" required placeholder="Enter Tags Here" name="uTags" id="uTags" />
                 </td>
             </tr>
             <tr>
-                <td class="form-label">Description</td>
+                <td class="form-label"><label for="uDescription" class="required">Description</label></td>
                 <td>
-                    <textarea data-ng-model="newBlog.Description" required placeholder="Enter Description Here" style="height: 50px;" name="uDescription"></textarea>
+                    <textarea data-ng-model="newBlog.Description" required placeholder="Enter Description Here" style="height: 50px;" name="uDescription" id="uDescription"></textarea>
                 </td>
             </tr>
             <tr>
-                <td class="form-label">Body</td>
+                <td class="form-label"><label for="uBody" class="required">Body</label></td>
                 <td>
-                    <textarea data-ng-model="newBlog.Body" required placeholder="Enter Body Here" style="height: 150px;" name="uBody"></textarea>
+                    <textarea data-ng-model="newBlog.Body" required placeholder="Enter Body Here" style="height: 150px;" name="uBody" id="uBody"></textarea>
                 </td>
             </tr>
         </table>

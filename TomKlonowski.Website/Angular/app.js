@@ -1,4 +1,4 @@
-﻿var ngApp = angular.module("ngApp", ['ngRoute', 'ngResource'])
+﻿var ngApp = angular.module("ngApp", ['ngRoute', 'ngResource', 'ui.bootstrap'])
 .run(["$rootScope", "$route", "blogs", function ($rootScope, $route, blogs) {
     $rootScope.$on("$routeChangeSuccess", function (currentRoute, previousRoute) {
         $rootScope.title = $route.current.title;

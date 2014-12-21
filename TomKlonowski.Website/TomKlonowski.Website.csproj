@@ -228,33 +228,41 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Angular\controllers\blog-view-controller.js" />
     <Content Include="Angular\controllers\test-controller.js" />
+    <Content Include="Angular\directives\draggable.js" />
+    <Content Include="Angular\directives\loading.js" />
     <Content Include="Angular\directives\slideable.js" />
+    <Content Include="Angular\directives\templates\loading.html" />
     <Content Include="Angular\filters\reverse-filter.js" />
     <Content Include="Angular\services\blog-service.js" />
     <Content Include="Angular\services\note-service.js" />
+    <Content Include="Angular\views\404.html" />
     <Content Include="Angular\views\blogs\view.html" />
     <Content Include="Angular\views\test.html" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\ie\html5shiv.js" />
+    <Content Include="Content\ie\images\grad0-20.svg" />
+    <Content Include="Content\ie\PIE.htc" />
+    <Content Include="Content\ie\v8.css" />
+    <Content Include="Content\ie\v9.css" />
+    <Content Include="Content\images\bg.png" />
+    <Content Include="Content\skel.css" />
+    <Content Include="Content\style-1000px.css" />
+    <Content Include="Content\style-desktop.css" />
+    <Content Include="Content\style-mobile.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\back.png" />
-    <Content Include="Images\active-tab.png" />
-    <Content Include="Images\error.png" />
-    <Content Include="Images\eye.png" />
-    <Content Include="Images\info-icon.png" />
-    <Content Include="Images\info.png" />
-    <Content Include="Images\nav-arrow-hover.png" />
-    <Content Include="Images\nav-arrow.png" />
-    <Content Include="Images\nav-arrow2.png" />
-    <Content Include="Images\plus.png" />
-    <Content Include="Images\plus_nb.png" />
-    <Content Include="Images\sidebar-link.png" />
-    <Content Include="Images\success.png" />
+    <Content Include="Images\angularjs.png" />
+    <Content Include="Images\log4net.png" />
+    <Content Include="Images\moq.png" />
+    <Content Include="Images\ninject.png" />
+    <Content Include="Images\picture.png" />
+    <Content Include="Images\servicestack.png" />
+    <Content Include="Images\squirt.png" />
+    <Content Include="Images\swaggerui.png" />
     <Content Include="Log4Net.config" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
@@ -294,9 +302,10 @@
     <Content Include="Scripts\angular\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular\angular-animate.min.js.map" />
     <Content Include="Scripts\angular\angular.min.js.map" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\tklonowski - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\tklonowski - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\tomklonowski.pubxml" />
@@ -320,7 +329,38 @@
     <Content Include="Scripts\libs\knockout-2.2.0.js" />
     <Content Include="Scripts\libs\modernizr-2.6.2.js" />
     <Content Include="Scripts\Navigation.js" />
+    <Content Include="Scripts\skel.min.js" />
     <Content Include="Scripts\Utilities.js" />
+    <Content Include="template\about.html" />
+    <Content Include="template\blogs.html" />
+    <Content Include="template\css\font-awesome.css" />
+    <Content Include="template\css\ie\html5shiv.js" />
+    <Content Include="template\css\ie\images\grad0-20.svg" />
+    <Content Include="template\css\ie\PIE.htc" />
+    <Content Include="template\css\ie\v8.css" />
+    <Content Include="template\css\ie\v9.css" />
+    <Content Include="template\css\images\bg.png" />
+    <Content Include="template\css\skel.css" />
+    <Content Include="template\css\style-1000px.css" />
+    <Content Include="template\css\style-desktop.css" />
+    <Content Include="template\css\style-mobile.css" />
+    <Content Include="template\css\style.css" />
+    <Content Include="template\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\images\angularjs.png" />
+    <Content Include="template\images\log4net.png" />
+    <Content Include="template\images\moq.png" />
+    <Content Include="template\images\ninject.png" />
+    <Content Include="template\images\picture.png" />
+    <Content Include="template\images\servicestack.png" />
+    <Content Include="template\images\squirt.png" />
+    <Content Include="template\images\swaggerui.png" />
+    <Content Include="template\index.html" />
+    <Content Include="template\js\init.js" />
+    <Content Include="template\js\jquery.min.js" />
+    <Content Include="template\js\jquery.scrolly.min.js" />
+    <Content Include="template\js\skel.min.js" />
+    <Content Include="template\LICENSE.txt" />
+    <Content Include="template\README.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -328,7 +368,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\libs\_references.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
@@ -350,6 +389,10 @@
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <Content Include="Views\Shared\_Sidebar.cshtml" />
+    <Content Include="template\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -358,14 +401,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TomKlonowski.Business\TomKlonowski.Business.csproj">
-      <Project>{b939d833-af69-4627-8b31-118a3544a756}</Project>
-      <Name>TomKlonowski.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TomKlonowski.Data\TomKlonowski.Data.csproj">
-      <Project>{32f0d07f-ab27-4ae9-8038-54efbf6682e2}</Project>
-      <Name>TomKlonowski.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TomKlonowski.DB\TomKlonowski.DB.csproj">
       <Project>{ea01d703-a1bc-40b3-9028-307e666c9942}</Project>
       <Name>TomKlonowski.DB</Name>

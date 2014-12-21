@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TomKlonowski.Business;
+using TomKlonowski.Api.Business;
 using Moq;
 using TomKlonowski.Model;
 

@@ -46,6 +46,7 @@
       <HintPath>..\packages\ServiceStack.Text.4.0.18\lib\net40\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,14 +66,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TomKlonowski.Business\TomKlonowski.Business.csproj">
-      <Project>{b939d833-af69-4627-8b31-118a3544a756}</Project>
-      <Name>TomKlonowski.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TomKlonowski.Data\TomKlonowski.Data.csproj">
-      <Project>{32f0d07f-ab27-4ae9-8038-54efbf6682e2}</Project>
-      <Name>TomKlonowski.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TomKlonowski.DB\TomKlonowski.DB.csproj">
       <Project>{ea01d703-a1bc-40b3-9028-307e666c9942}</Project>
       <Name>TomKlonowski.DB</Name>

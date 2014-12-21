@@ -7,7 +7,6 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using TomKlonowski.Api.Model.Request;
-using TomKlonowski.Api.Service;
 
 namespace TomKlonowski.Api
 {

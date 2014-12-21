@@ -1,52 +1,76 @@
 ﻿@using TomKlonowski.Website.Helpers;
 
-<!DOCTYPE html>
-<html lang="en" data-ng-app="ngApp">
-<head>
-    <meta charset="utf-8" />
-    <title data-ng-bind="'Tom Klonowski - ' + $root.title">Tom Klonowski</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width" />
+<!DOCTYPE HTML>
+<html data-ng-app="ngApp">
+	<head>
+		<title data-ng-bind="'Tom Klonowski - ' + $root.title">Tom Klonowski</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+
     @Styles.Render("~/Content/css")
 
     <script src="/Scripts/Global.js"></script>
+    <script src="/Scripts/skel.min.js"></script>
     <script>
         Global.loadVars('@System.Configuration.ConfigurationManager.AppSettings["SiteUrl"]', '@System.Configuration.ConfigurationManager.AppSettings["ServiceStackUrl"]');
     </script>
 
     @Scripts.Render("~/bundles/angular")
-
+    @Scripts.Render("~/bundles/skel")
     @RenderSection("AngularJavascript", required: false)
-</head>
-<body>
-    <div id="wrap">
-        <div class="message-box">
+
+	</head>
+	<body>
+        @Html.Partial("_Navigation")
+        <div data-ng-view="">
+            @RenderBody()
         </div>
-        <div id="main">
-            <header>
-                <div id="header">
-                    <div id="logo">
-                        <div id="logo_text">
-                            <h1><a href="@Url.Action("Index", "Home")">Tom<span class="logo_colour">Klonowski</span></a></h1>
-                            <h2>Development Portfolio</h2>
-                        </div>
-                    </div>
-                    @Html.Partial("_Navigation")
-                </div>
-            </header>
-            <div id="site_content">
-                @Html.Partial("_Sidebar")
-                <div id="content">
-                    <div data-ng-view="" class="page-view" data-ng-class="pageAnimationClass">
-                        @RenderBody()
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        @Html.Partial("_Footer")
-    </footer>
+
+		<!-- Contact -->
+			<div class="wrapper style4">
+				<article id="contact" class="container 75%">
+					<div>
+						<div class="row">
+							<div class="12u">
+								<h3>Find me on ...</h3>
+								<ul class="social">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+									<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+									<!--
+									<li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
+									<li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
+									<li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
+									<li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
+									<li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
+									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
+									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
+									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
+									-->
+								</ul>
+								<hr />
+							</div>
+						</div>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Tom Klonowski. All rights reserved.</li><li>Design courtesy of <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+				</article>
+			</div>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jquerycustomlibs")
     @Scripts.Render("~/bundles/custom")
@@ -56,5 +80,5 @@
             Global.init();
         });
     </script>
-</body>
+	</body>
 </html>

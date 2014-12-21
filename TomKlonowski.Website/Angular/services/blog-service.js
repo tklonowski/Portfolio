@@ -1,32 +1,12 @@
 ﻿ngApp.service('blogs', ["$http", "$q", function ($http, $q) {
     var apiPath = apiUrl('/blog');
-
-    var blogs = [];
-    var currentBlog = null;
-
-    var getAllBlogs = function () {
-        return blogs;
-    }
+    var blogsPromise;
 
     var deleteBlog = function (blogId) {
         $http.delete(apiPath + "/" + blogId)
         .success(function (data, status, headers, config) {
             Util.addMessage('success', 'Blog Deleted Successfully', 'Your blog has been deleted successfully.');
         });
-    }
-    
-    var setCurrentBlog = function (blogId) {
-        var id = parseInt(blogId);
-
-        for (var i = 0; i < blogs.length; i += 1) {
-            if (blogs[i].Id === id) {
-                currentBlog = blogs[i];
-            }
-        }
-    }
-
-    var getCurrentBlog = function () {
-        return currentBlog;
     }
 
     var createBlog = function (title, tags, description, body, callback) {
@@ -38,20 +18,24 @@
             });
     }
 
-    $http.get(apiPath).success(function (data) {
-        if (data.length > 0) {
-            for (var i = data.length - 1; i >= 0; i -= 1) {
-                blogs.unshift(data[i]);
-            }
+    var getBlogs = function () {
+        if (!blogsPromise) {
+            blogsPromise = $q.defer();
+
+            $http.get(apiPath)
+              .success(function (data) {
+                  blogsPromise.resolve(data);
+              }).error(function (data) {
+                  blogsPromise.reject(data);
+              });
         }
-    });
+
+        return blogsPromise.promise;
+    }
 
     return {
-        getAllBlogs: getAllBlogs,
-        deleteBlog: deleteBlog,
+        getBlogs: getBlogs,
         createBlog: createBlog,
-        setCurrentBlog: setCurrentBlog,
-        getCurrentBlog: getCurrentBlog
+        deleteBlog: deleteBlog
     };
-
 }]);

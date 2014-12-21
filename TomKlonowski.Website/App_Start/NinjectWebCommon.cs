@@ -8,8 +8,6 @@ namespace TomKlonowski.Website.App_Start
     using Ninject.Web.Common;
     using System;
     using System.Web;
-    using TomKlonowski.Business;
-    using TomKlonowski.Data.Repository;
     using TomKlonowski.DB;
 
     public static class NinjectWebCommon 
@@ -58,11 +56,6 @@ namespace TomKlonowski.Website.App_Start
 
         private static void RegisterServices(IKernel kernel)
         {
-            //Repositories
-            kernel.Bind<INoteRepository>().To<SqlRepository>();
-
-            //Managers
-            kernel.Bind<INoteManager>().To<NoteManager>();
         }        
     }
 }

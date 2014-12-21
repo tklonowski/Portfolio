@@ -51,7 +51,9 @@
         title: "View Blog"
     });
 
-    $routeProvider.otherwise({ redirectTo: "/" });
+    $routeProvider.otherwise(
+        { templateUrl: '/Angular/views/404.html' }
+        );
 
     $locationProvider.html5Mode(true);
 

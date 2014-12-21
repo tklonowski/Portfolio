@@ -1,12 +1,4 @@
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\obj\Debug\TomKlonowski.Data.csprojResolveAssemblyReference.cache
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Data.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Data.pdb
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Models.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Models.pdb
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\obj\Debug\TomKlonowski.Data.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\obj\Debug\TomKlonowski.Data.pdb
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Data.dll.config
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\EntityFramework.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\EntityFramework.SqlServer.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\EntityFramework.xml
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Data.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\bin\Debug\TomKlonowski.Data.pdb
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\obj\Debug\TomKlonowski.Data.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Data\obj\Debug\TomKlonowski.Data.pdb

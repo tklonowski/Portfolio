@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B939D833-AF69-4627-8B31-118A3544A756}</ProjectGuid>
+    <ProjectGuid>{5839D888-3123-47F4-8781-3E09D90008C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TomKlonowski.Business</RootNamespace>
@@ -30,15 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,29 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlogManager.cs" />
-    <Compile Include="IBlogManager.cs" />
-    <Compile Include="INoteManager.cs" />
-    <Compile Include="NoteManager.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TomKlonowski.Data\TomKlonowski.Data.csproj">
-      <Project>{32f0d07f-ab27-4ae9-8038-54efbf6682e2}</Project>
-      <Name>TomKlonowski.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TomKlonowski.DB\TomKlonowski.DB.csproj">
-      <Project>{ea01d703-a1bc-40b3-9028-307e666c9942}</Project>
-      <Name>TomKlonowski.DB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TomKlonowski.Models\TomKlonowski.Model.csproj">
-      <Project>{b2860b83-155d-4584-962f-ba1afb525756}</Project>
-      <Name>TomKlonowski.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

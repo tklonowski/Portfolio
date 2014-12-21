@@ -1,30 +1,86 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<!-- Home -->
+<div class="wrapper style1 first">
+    <article class="container" id="top">
+        <div class="row">
+            <div class="4u">
+                <span class="image fit">
+                    <img src="images/picture.png" alt="" /></span>
+            </div>
+            <div class="8u">
+                <header>
+                    <h1>Welcome, I am <strong>Tom Klonowski</strong>!</h1>
+                </header>
+                <p>This website is my online portfolio. It is an area where I can play around with and share some of the latest technologies with the development community.</p>
+                <a href="#work" class="button big scrolly">Read My Blogs!</a>
+            </div>
+        </div>
+    </article>
+</div>
 
-<h1>Welcome to Tom Klonowski's Portfolio</h1>
-<p>
-    This website is currently in progress. It not only describes my skills, but it puts some of them to use.
-    It was written in .NET MVC 4, using Razor syntax. 
-    The technologies used in this website so far include, but are not limited to:
-    <ul>
-        <li><a href="http://www.ninject.org/">Ninject</a> for Dependency Injection and IoC</li>
-        <li>
-            <a href="https://servicestack.net/">ServiceStack</a> for a Service framework
-            <ul>
-                <li><a href="https://github.com/wordnik/swagger-ui">SwaggerUI</a> to test ServiceStack services</li>
-            </ul>
-        </li>
-        <li><a href="http://logging.apache.org/log4net/">Log4Net</a> for logging purposes</li>
-        <li><a href="https://angularjs.org/">AngularJS</a> for full MVC JS support</li>
-        <li><a href="https://github.com/Moq/moq4">Moq</a> for automated mock Unit Testing</li>
-        <li>
-            <a href="http://msdn.microsoft.com/en-us/data/ef.aspx">EntityFramework</a> for data manipulation
-            <ul>
-                <li><a href="">CodeFirst</a> for database creation/maintenance</li>
-            </ul>
-        </li>
-        
-        <li><a href="http://jquery.com/">jQuery</a> for further JS support</li>
-    </ul>
-</p>
+<!-- Work -->
+<div class="wrapper style2">
+    <article id="work">
+        <header>
+            <h2>Here are most of the technologies used in this site</h2>
+            <p>
+                This website is fully responsive. A mobile first approach is taken in order to deliver a consistant experience
+							across all devices.
+            </p>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="4u">
+                    <section class="box style1">
+                        <span><a href="http://www.ninject.org/" target="_blank">
+                            <img src="images/ninject.png" /></a></span>
+                        <h3>Ninject</h3>
+                        <p>Ninject helps you use the technique of dependency injection to break your applications into loosely-coupled, highly-cohesive components.</p>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="box style1">
+                        <span><a href="https://servicestack.net/" target="_blank">
+                            <img src="images/servicestack.png" /></a></span>
+                        <h3>ServiceStack</h3>
+                        <p>One framework for all your services and web apps that's intuitive and Easy-to-use!</p>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="box style1">
+                        <span><a href="https://github.com/swagger-api/swagger-ui" target="_blank">
+                            <img src="images/swaggerui.png" /></a></span>
+                        <h3>Swagger UI</h3>
+                        <p>Swagger UI is part of the Swagger project. The Swagger project allows you to produce, visualize and consume your OWN RESTful services.</p>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="box style1">
+                        <span><a href="http://logging.apache.org/log4net/" target="_blank">
+                            <img src="images/log4net.png" /></a></span>
+                        <h3>log4net</h3>
+                        <p>The Apache log4net library is a tool to help the programmer output log statements to a variety of output targets.</p>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="box style1">
+                        <span><a href="https://angularjs.org/" target="_blank">
+                            <img src="images/angularjs.png" /></a></span>
+                        <h3>AngularJS</h3>
+                        <p>AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax.</p>
+                    </section>
+                </div>
+                <div class="4u">
+                    <section class="box style1">
+                        <span><a href="https://github.com/Moq/moq4" target="_blank">
+                            <img src="images/moq.png" /></a></span>
+                        <h3>Moq</h3>
+                        <p>The most popular and friendly mocking framework for .NET</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a class="button big">Show More</a>
+        </footer>
+    </article>
+</div>

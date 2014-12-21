@@ -1,10 +1,10 @@
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\TomKlonowski.Models.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\TomKlonowski.Models.pdb
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\obj\Debug\TomKlonowski.Models.dll
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\obj\Debug\TomKlonowski.Models.pdb
-c:\users\tom\documents\visual studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\obj\Debug\TomKlonowski.Model.csprojResolveAssemblyReference.cache
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\TomKlonowski.Models.dll.config
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\TomKlonowski.Models.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\TomKlonowski.Models.pdb
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\EntityFramework.dll
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\EntityFramework.xml
 C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\obj\Debug\TomKlonowski.Model.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\obj\Debug\TomKlonowski.Models.dll
+C:\Users\Tom\Documents\Visual Studio 2012\Projects\TomKlonowski.Api\TomKlonowski.Models\obj\Debug\TomKlonowski.Models.pdb

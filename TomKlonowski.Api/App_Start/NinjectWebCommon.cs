@@ -3,15 +3,17 @@
 
 namespace TomKlonowski.Api.App_Start
 {
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-    using Ninject;
-    using Ninject.Web.Common;
-    using ServiceStack.Configuration;
     using System;
     using System.Web;
-    using TomKlonowski.Business;
-    using TomKlonowski.Data.Repository;
+
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+    using Ninject;
+    using Ninject.Web.Common;
+    using TomKlonowski.Api.Data.Repository;
     using TomKlonowski.DB;
+    using TomKlonowski.Api.Business;
+    using ServiceStack.Configuration;
 
     public static class NinjectWebCommon 
     {

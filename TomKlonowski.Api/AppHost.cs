@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using TomKlonowski.Api.App_Start;
-using TomKlonowski.Api.Service;
 
 namespace TomKlonowski.Api
 {

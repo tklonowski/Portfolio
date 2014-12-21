@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TomKlonowski.Data.Repository;
+using TomKlonowski.Api.Data.Repository;
 using TomKlonowski.Model;
 
 namespace TomKlonowski.DB

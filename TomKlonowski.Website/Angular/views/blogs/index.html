@@ -9,16 +9,25 @@
         </header>
         <loading data-ng-show="!loaded"></loading>
         <div class="container" data-ng-show="loaded">
-            <div class="row">
-                <div class="4u" data-ng-repeat="blog in blogs">
-                    <article class="box style2">
-                        <h3><a href="#">{{blog.Title}}</a></h3>
-                        <p style="font-style: italic; font-size: .8em; margin-bottom: 5px;">{{blog.Tags}}</p>
-                        <p style="font-style: italic; font-size: .8em; margin-bottom: 5px;">{{blog.CreatedDate | date:'short'}}</p>
-                        <p>{{blog.Description}}</p>
-                        <a href="#work" class="button big">Read Blog</a>
-                    </article>
+            <div data-ng-show="hasBlogs">
+                <button class="button big alt" data-ng-click="pageBackward()" style="float: left;" data-ng-show="showPageBackButton">Back</button>
+                <button class="button big" data-ng-click="pageForward()" style="float: right;" data-ng-show="showPageForwardButton">Next</button>
+                <div class="clear">{{paginationMessage}}</div>
+                <div class="row">
+                    <div class="4u" data-ng-repeat="blog in blogs">
+                        <article class="box style2">
+                            <h3><a href="#">{{blog.Title}}</a></h3>
+                            <span style="font-style: italic; font-size: .8em; float: left;">Tags: <em>{{blog.Tags}}</em></span>
+                            <span style="font-style: italic; font-size: .8em; float: right;"><strong>{{blog.CreatedDate | date:'short'}}</strong></span>
+                            <div class="clear"></div>
+                            <div style="height: 170px; overflow-y: auto; overflow-x: hidden; margin-top: 10px;">{{blog.Description}}</div>
+                            <a href="/blogs/{{blog.Id}}" class="button big">Read Blog</a>
+                        </article>
+                    </div>
                 </div>
+            </div>
+            <div data-ng-show="!hasBlogs">
+                <p>There are no blogs available to read right now.</p>
             </div>
         </div>
         <footer>

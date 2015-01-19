@@ -1,84 +1,41 @@
-﻿@using TomKlonowski.Website.Helpers;
-
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html data-ng-app="ngApp">
-	<head>
-		<title data-ng-bind="'Tom Klonowski - ' + $root.title">Tom Klonowski</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+<head>
+    <title data-ng-bind="'Tom Klonowski - ' + $root.title">Tom Klonowski</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
     @Styles.Render("~/Content/css")
-
-    <script src="/Scripts/Global.js"></script>
-    <script src="/Scripts/skel.min.js"></script>
-    <script>
-        Global.loadVars('@System.Configuration.ConfigurationManager.AppSettings["SiteUrl"]', '@System.Configuration.ConfigurationManager.AppSettings["ServiceStackUrl"]');
-    </script>
-
+    @Scripts.Render("~/bundles/global")
     @Scripts.Render("~/bundles/angular")
-    @Scripts.Render("~/bundles/skel")
+    @Scripts.Render("~/bundles/skel")
     @RenderSection("AngularJavascript", required: false)
 
-	</head>
-	<body>
-        @Html.Partial("_Navigation")
-        <div data-ng-view="">
-            @RenderBody()
-        </div>
+</head>
+<body>
+    @Html.Partial("_Navigation")
+    <div data-ng-view="" autoscroll="true">
+        @RenderBody()
+    </div>
 
-		<!-- Contact -->
-			<div class="wrapper style4">
-				<article id="contact" class="container 75%">
-					<div>
-						<div class="row">
-							<div class="12u">
-								<h3>Find me on ...</h3>
-								<ul class="social">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-									<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									<!--
-									<li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
-									<li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
-									<li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
-									<li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
-									<li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
-									<li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
-									<li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
-									<li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-									-->
-								</ul>
-								<hr />
-							</div>
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Tom Klonowski. All rights reserved.</li><li>Design courtesy of <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</article>
-			</div>
+    <!-- Contact -->
+    <div class="wrapper style4">
+        <article id="contact" class="container 75%">
+            @Html.Partial("_FindMeOn")
+            @Html.Partial("_Footer")
+        </article>
+    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jquerycustomlibs")
     @Scripts.Render("~/bundles/custom")
     @RenderSection("scripts", required: false)
     <script>
-        $(document).ready(function () {
-            Global.init();
-        });
+        Global.init();
     </script>
-	</body>
+</body>
 </html>

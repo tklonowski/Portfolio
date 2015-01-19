@@ -1,66 +1,46 @@
-﻿<div>
-    <div>
-        <h1 class="left" style="padding-right: 0px;">Add a Blog</h1>
-        <img class="info btn btn-default" id="info-add-blog" src="/Images/info-icon.png" data-popover-placement="top" data-popover-title="Adding a Blog" data-popover="This will add a blog to the website. Noone but me should really be doing this, but since it's not locked down, get at it!" />
-        <div class="right"><label class="required">Required</label></div>
-
-        <div class="clear"></div>
-    </div>
-    <form name="form" class="css-form" novalidate>
-        <div data-ng-show="(form.uTitle.$dirty && form.uTitle.$invalid) || (form.uTags.$dirty && form.uTags.$invalid) || (form.uDescription.$dirty && form.uDescription.$invalid) || (form.uBody.$dirty && form.uBody.$invalid) " class="validate-summary">
-            <span>Please correct the following errors:</span>
-            <ul>
-                <li data-ng-show="form.uTitle.$error.required && form.uTitle.$dirty">Your blog must have a title.</li>
-                <li data-ng-show="form.uTags.$error.required && form.uTags.$dirty">Your blog must have at least one tag.</li>
-                <li data-ng-show="form.uDescription.$error.required && form.uDescription.$dirty">Your blog must have a description.</li>
-                <li data-ng-show="form.uBody.$error.required && form.uBody.$dirty">What is the point of a blog without a body?</li>
-            </ul>
-        </div>
-        <table class="form-table">
-            <tr>
-                <td class="form-label"><label for="uTitle" class="required">Title</label></td>
-                <td>
-                    <input type="text" data-ng-model="newBlog.Title" required placeholder="Enter Title Here" name="uTitle" id="uTitle" />
-                </td>
-            </tr>
-            <tr>
-                <td class="form-label"><label for="uTags" class="required">Tags</label></td>
-                <td>
-                    <input type="text" data-ng-model="newBlog.Tags" required placeholder="Enter Tags Here" name="uTags" id="uTags" />
-                </td>
-            </tr>
-            <tr>
-                <td class="form-label"><label for="uDescription" class="required">Description</label></td>
-                <td>
-                    <textarea data-ng-model="newBlog.Description" required placeholder="Enter Description Here" style="height: 50px;" name="uDescription" id="uDescription"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td class="form-label"><label for="uBody" class="required">Body</label></td>
-                <td>
-                    <textarea data-ng-model="newBlog.Body" required placeholder="Enter Body Here" style="height: 150px;" name="uBody" id="uBody"></textarea>
-                </td>
-            </tr>
-        </table>
-        <input type="button" data-ng-disabled="form.$invalid" style="margin-bottom: 10px;" data-ng-click="addBlog()" value="Add Blog" class="button right" />
-    </form>
-    <hr class="clear" />
-    <h1>Preview</h1>
-    <div class="blog">
-        <div>
-            <div class="blog-title">
-                <span id="blog-title">{{newBlog.Title}}</span>
+﻿<div class="wrapper style3 first">
+    <article id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+                    <h1>Add a Blog</h1>
+                    <form name="form" class="css-form" novalidate>
+                        <table class="form-table">
+                            <tr>
+                                <td class="form-label">
+                                    <label for="uTitle" class="required">Title<required></required></label></td>
+                                <td>
+                                    <input type="text" data-ng-model="blog.title" required placeholder="Enter Title Here" name="uTitle" id="uTitle" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-label">
+                                    <label for="uTags" class="required">Tags<required></required></label></td>
+                                <td>
+                                    <input type="text" data-ng-model="blog.tags" required placeholder="Enter Tags Here" name="uTags" id="uTags" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-label">
+                                    <label for="uDescription" class="required">Description<required></required></label></td>
+                                <td>
+                                    <textarea data-ng-model="blog.description" required placeholder="Enter Description Here" style="height: 100px;" name="uDescription" id="uDescription"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-label">
+                                    <label for="uBody" class="required">Body<required></required></label></td>
+                                <td>
+                                    <textarea data-ng-model="blog.body" required placeholder="Enter Body Here" style="height: 150px;" name="uBody" id="uBody"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="button" data-ng-disabled="form.$invalid" style="margin-bottom: 10px;" data-ng-click="submitForm()" value="Add Blog" class="button right" />
+                    </form>
+                </div>
             </div>
-            <div class="blog-tag">
-                <span>Tags: </span><i id="blog-tags">{{newBlog.Tags}}</i>
-            </div>
-            <div class="clear"></div>
         </div>
-        <div class="blog-date">
-            <span id="blog-date">{{date | date:'medium'}}</span>
-        </div>
-        <div class="blog-body">
-            <span id="blog-body">{{newBlog.Body}}</span>
-        </div>
-    </div>
+        <footer>
+        </footer>
+    </article>
 </div>

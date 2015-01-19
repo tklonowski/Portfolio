@@ -1,6 +1,8 @@
-﻿ngApp.directive('loading', function () {
-    return {
-        restrict: 'E',
-        template: '<div class="spinner"><div class="dot1"></div><div class="dot2"></div></div>'
-    }
-});
+﻿(function (app) {
+    app.directive('loading', function () {
+        return {
+            restrict: 'E',
+            templateUrl: "/Angular/directives/templates/loading.html"
+        }
+    });
+})(ngApp);

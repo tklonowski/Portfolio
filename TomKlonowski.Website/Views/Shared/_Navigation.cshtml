@@ -1,9 +1,26 @@
-﻿<nav id="nav" data-ng-controller="NavigationController">
-    <ul class="container">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blogs">Blogs</a></li>
-        <li><a href="/test">Test Page</a></li>
-        <li><a href="/404asjnkcjk">404 Me</a></li>
-    </ul>
-</nav>
+﻿<div class="top-container">
+    <nav id="nav" data-ng-controller="NavigationController">
+        <div id="navTitle">
+            <div class="title">
+                Tom Klonowski
+            </div>
+            <div class="hamburger-menu" data-ng-click="toggleMenu()">
+                <img src="~/Images/hamburger.png" />
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <ul class="{{navCss}}">
+            <li data-ng-click="hideMenu()"><a href="/">Home</a></li>
+            <li data-ng-click="hideMenu()"><a href="/about">About</a></li>
+            <li data-ng-click="hideMenu()"><a href="/blogs">Blogs</a></li>
+            <li data-ng-click="hideMenu()"><a href="/test">Test Page</a></li>
+        </ul>
+        <div class="notification-container">
+            <div class="{{notification.css}}" data-ng-repeat="notification in notifications">
+                {{notification.message}}
+            <span class="notification-close" data-ng-click="removeNotification(notification)">X
+            </span>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -30,7 +30,7 @@ namespace TomKlonowski.Api.Service
         {
             JsConfig.DateHandler = DateHandler.UnixTimeMs;
             var blogs = this._BlogManager.GetBlogs();
-            return blogs;
+            return blogs.OrderByDescending(o => o.CreatedDate);
         }
 
         public object Post(CreateBlogRequest request)

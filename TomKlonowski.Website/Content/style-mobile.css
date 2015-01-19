@@ -179,6 +179,21 @@
 			background-color: #383838;
 				box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255,255,255,0.2);
 		}
+
+#navTitle {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#nav .container {
+    display: none;
+}
+
+#nav .display-container {
+    display: inherit !important;
+}
 		
 /*********************************************************************************/
 /* Articles                                                                      */
@@ -225,4 +240,34 @@
 .top-header
 {
 	margin-top: 15px;
+}
+
+/**************************************
+    Notifications
+ *************************************/
+.notification {
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5), inset 0px 2px 1px 0px rgba(255,255,255,0.75);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.notification-close {
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-size: 1.8em;
+    margin-top: -10px;
+    border-radius: 30px;
+}
+
+.notification-close:hover {
+    background-color: rgba(50,50,50,0.2);
 }

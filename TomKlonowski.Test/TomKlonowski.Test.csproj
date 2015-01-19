@@ -53,7 +53,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="INoteManager.cs" />
     <Compile Include="ManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

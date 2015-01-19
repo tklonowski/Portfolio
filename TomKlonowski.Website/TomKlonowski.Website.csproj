@@ -215,28 +215,33 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ConfigurationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\TomKlonowskiHelpers.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ConfigurationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Angular\controllers\blog-view-controller.js" />
+    <Content Include="Angular\controllers\blogs\blog-add-controller.js" />
+    <Content Include="Angular\controllers\blogs\blog-view-controller.js" />
     <Content Include="Angular\controllers\test-controller.js" />
     <Content Include="Angular\directives\draggable.js" />
     <Content Include="Angular\directives\loading.js" />
+    <Content Include="Angular\directives\required.js" />
     <Content Include="Angular\directives\slideable.js" />
     <Content Include="Angular\directives\templates\loading.html" />
+    <Content Include="Angular\directives\templates\required.html" />
     <Content Include="Angular\filters\reverse-filter.js" />
     <Content Include="Angular\services\blog-service.js" />
-    <Content Include="Angular\services\note-service.js" />
+    <Content Include="Angular\services\configuration-service.js" />
+    <Content Include="Angular\services\logging-service.js" />
+    <Content Include="Angular\services\notification-service.js" />
     <Content Include="Angular\views\404.html" />
     <Content Include="Angular\views\blogs\view.html" />
     <Content Include="Angular\views\test.html" />
@@ -256,6 +261,8 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\angularjs.png" />
+    <Content Include="Images\azure.png" />
+    <Content Include="Images\hamburger.png" />
     <Content Include="Images\log4net.png" />
     <Content Include="Images\moq.png" />
     <Content Include="Images\ninject.png" />
@@ -284,10 +291,9 @@
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Angular\controllers\about-controller.js" />
-    <Content Include="Angular\controllers\blog-controller.js" />
+    <Content Include="Angular\controllers\blogs\blog-controller.js" />
     <Content Include="Angular\controllers\home-controller.js" />
     <Content Include="Angular\controllers\navigation-controller.js" />
-    <Content Include="Angular\controllers\note-controller.js" />
     <Content Include="Angular\app.js" />
     <Content Include="Angular\views\about.html" />
     <Content Include="Angular\views\blogs\add.html" />
@@ -309,28 +315,13 @@
     <None Include="Properties\PublishProfiles\tklonowski - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\tklonowski - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\tomklonowski.pubxml" />
-    <None Include="Scripts\jquery\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\Global.js" />
-    <Content Include="Scripts\jquery\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery\jquery-1.9.0.min.js" />
-    <Content Include="Scripts\jquery\jquery-1.9.0.min.map" />
-    <None Include="Scripts\jquery\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery\jquery-ui-1.8.24.min.js" />
-    <Content Include="Scripts\jquery\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery\jquery.validate.js" />
-    <Content Include="Scripts\jquery\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\libs\jquery.ba-dotimeout.js" />
     <Content Include="Scripts\libs\jquery.ba-dotimeout.min.js" />
     <Content Include="Scripts\libs\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\libs\knockout-2.2.0.js" />
     <Content Include="Scripts\libs\modernizr-2.6.2.js" />
-    <Content Include="Scripts\Navigation.js" />
-    <Content Include="Scripts\skel.min.js" />
-    <Content Include="Scripts\Utilities.js" />
+    <Content Include="Scripts\libs\skel.js" />
     <Content Include="template\about.html" />
     <Content Include="template\blogs.html" />
     <Content Include="template\css\font-awesome.css" />
@@ -361,7 +352,9 @@
     <Content Include="template\js\skel.min.js" />
     <Content Include="template\LICENSE.txt" />
     <Content Include="template\README.txt" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -388,11 +381,11 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
-    <Content Include="Views\Shared\_Sidebar.cshtml" />
     <Content Include="template\fonts\fontawesome-webfont.eot" />
     <Content Include="template\fonts\fontawesome-webfont.ttf" />
     <Content Include="template\fonts\fontawesome-webfont.woff" />
     <Content Include="template\fonts\FontAwesome.otf" />
+    <Content Include="Views\Shared\_FindMeOn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

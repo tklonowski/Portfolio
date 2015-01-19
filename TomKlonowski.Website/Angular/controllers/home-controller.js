@@ -1,3 +1,5 @@
-﻿ngApp.controller("HomeController", ["$scope", function ($scope) {
+﻿(function (app) {
+    app.controller("HomeController", ["$scope", function ($scope) {
 
-}]);
+    }]);
+})(ngApp);

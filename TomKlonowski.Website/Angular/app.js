@@ -1,16 +1,15 @@
 ﻿var ngApp = angular.module("ngApp", ['ngRoute', 'ngResource', 'ui.bootstrap'])
-.run(["$rootScope", "$route", "blogs", function ($rootScope, $route, blogs) {
+.run(["$rootScope", "$route", "configurationService", function ($rootScope, $route, configurationService) {
     $rootScope.$on("$routeChangeSuccess", function (currentRoute, previousRoute) {
         $rootScope.title = $route.current.title;
-
-        switch($route.current.originalPath) {
-            case '/blogs/:id':
-                //should be loaded based on architecture, might want to change to check, and load if not.
-                blogs.setCurrentBlog($route.current.params.id);
-                break;
-            default:
-        }
     });
+
+    var handleLoadConfiguration = function (data) {
+        configurationService.setServiceStackUrl(data.ServiceStackUrl);
+        configurationService.setSiteUrl(data.SiteUrl);
+    };
+
+    configurationService.loadConfiguration().then(handleLoadConfiguration);
 }])
 .config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
@@ -40,21 +39,20 @@
     });
 
     $routeProvider.when("/blogs/add", {
-        controller: "BlogController",
+        controller: "BlogAddController",
         templateUrl: "/Angular/views/blogs/add.html",
         title: "Add Blog"
     });
 
     $routeProvider.when("/blogs/:id", {
-        controller: "BlogController",
+        controller: "BlogViewController",
         templateUrl: "/Angular/views/blogs/view.html",
         title: "View Blog"
     });
 
-    $routeProvider.otherwise(
-        { templateUrl: '/Angular/views/404.html' }
-        );
+    $routeProvider.otherwise({
+        templateUrl: '/Angular/views/404.html'
+    });
 
     $locationProvider.html5Mode(true);
-
 }]);;

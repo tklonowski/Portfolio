@@ -19,7 +19,6 @@ namespace TomKlonowski.Api.Models.Request
         public string Description { get; set; }
     }
 
-    [Route("/blog/{BlogId}", "GET")]
     public class GetBlogRequest
     {
         [ApiMember(Name = "BlogId", ParameterType = "path", Description = "Id of the Blog to get", DataType = "int", IsRequired = true)]

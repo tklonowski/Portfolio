@@ -8,53 +8,86 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body
-	{
-		min-width: 960px;
-	}
+body {
+    min-width: 960px;
+}
 
-	body,input,textarea,select
-	{
-		font-size: 11pt;
-	}
+body, input, textarea, select {
+    font-size: 11pt;
+}
 
-	header
-	{
-		margin: 0 0 4em 0;
-	}
-	
+header {
+    margin: 0 0 4em 0;
+}
+
 /*********************************************************************************/
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-	.wrapper
-	{
-		padding: 5em 0 5em 0;
-		text-align: center;
-	}
-	
-		.wrapper.first
-		{
-			padding-top: 9em;
-		}
+.wrapper {
+    padding: 5em 0 5em 0;
+    text-align: center;
+}
 
-		.wrapper.style4 .row-special
-		{
-			margin: 2em 0 0 0;
-			padding: 2em 0 2em 0;
-		}
+    .wrapper.first {
+        padding-top: 9em;
+    }
+
+    .wrapper.style4 .row-special {
+        margin: 2em 0 0 0;
+        padding: 2em 0 2em 0;
+    }
 
 /*********************************************************************************/
 /* Articles                                                                      */
 /*********************************************************************************/
 
-	#top
-	{
-	}
+#top {
+}
 
-		#top .image
-		{
-			width: 19.5em;
-			height: 19.5em;
-			margin: 0;
-		}
+    #top .image {
+        width: 19.5em;
+        height: 19.5em;
+        margin: 0;
+    }
+
+/*********************************************************************************/
+/* Navigation                                                                    */
+/*********************************************************************************/
+
+#nav li {
+    display: inline-block;
+}
+
+#navTitle {
+    display: none;
+}
+
+/**************************************
+    Notifications
+ *************************************/
+.notification {
+    width: 100%;
+    text-align: center;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.5), inset 0px 2px 1px 0px rgba(255,255,255,0.75);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.notification-close {
+    float: right;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 5px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: -5px;
+}
+
+    .notification-close:hover {
+        background-color: rgba(50,50,50,0.2);
+    }

@@ -1,19 +1,64 @@
-﻿<div>
-    <div class="blog" style="display: none; margin-top: 20px;">
-        <div>
-            <div class="blog-title">
-                <span id="blog-title">{{currentBlog.Title}}</span>
+﻿<!--    <div data-ng-show="!blogs.length">There are currently no blogs available.</div>
+    <div data-ng-show="blogs.length">-->
+<!-- Portfolio -->
+<div class="wrapper style3 first">
+    <article id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+                    <h1>{{blog.Title}}</h1>
+                    <span style="float: right; font-style: italic; padding: 0; margin: 0;">Posted on {{blog.CreatedDate | date:'short'}}</span>
+                    <span style="float: left; font-style: italic; padding: 0; margin: 0;">Tags: <strong>{{blog.Tags}}</strong></span>
+                    <div class="clear"></div>
+                    <article class="box style2">
+                        {{blog.Body}}
+                    </article>
+                </div>
             </div>
-            <div class="blog-tag">
-                <span>Tags: </span><i id="blog-tags">{{currentBlog.Tags}}</i>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="12u">
+                        <hr />
+                        <p>There are no available comments.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="4u">
+                    </div>
+                    <div class="4u">
+                        <hr style="border: 1px dashed;" />
+                    </div>
+                    <div class="4u">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="12u">
+                        <h1>Add a Comment</h1>
+                        <form name="form" class="css-form" novalidate>
+                            <table class="form-table">
+                                <tr>
+                                    <td class="form-label">
+                                        <label for="uName" class="required">Name</label></td>
+                                    <td>
+                                        <input type="text" data-ng-model="name" placeholder="Enter Name Here" name="uName" id="uName" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="form-label">
+                                        <label for="uComment" class="required">Comment<required></required></label></td>
+                                    <td>
+                                        <textarea data-ng-model="comment" required placeholder="Enter Comment Here" style="height: 150px;" name="uComment" id="uComment"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <input type="button" data-ng-disabled="form.$invalid" style="margin-bottom: 10px;" data-ng-click="submitForm()" value="Add Comment" class="button right" />
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="clear"></div>
-        </div>
-        <div class="blog-date">
-            <span id="blog-date">{{currentBlog.CreatedDate | date:'short'}}</span>
-        </div>
-        <div class="blog-body">
-            <span id="blog-body">{{currentBlog.Body}}</span>
-        </div>
-    </div>
+</div>
+</footer>
+    </article>
 </div>
